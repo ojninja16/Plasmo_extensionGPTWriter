@@ -1,32 +1,89 @@
 ## Demo Video :- [Click Here](https://drive.google.com/file/d/1JWrETe7qec2EzUqhMed2sOmTbibvFW2l/view?usp=sharing)
 
 ## Getting Started
+## Setting Up the Dev Environment
 
-First, run the development server:
+To run the application on your local machine, follow these steps to set up your development environment:
+1. Clone the repo
 
-```bash
-pnpm dev
-# or
-npm run dev
-```
+    ```
+    git clone https://github.com/ojninja16/Plasmo_extensionGPTWriter
+    ```
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+3. Configure/Create a .env file in the project's root directory and add the following environment variable::
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+    ```
+    PLASMO_PUBLIC_IPINFO_API_TOKEN=<value>
+    ```
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+    #### You can obtain the API key by signing up at https://ipinfo.io/.
+
+4. Install the dependencies using either of the following commands:
+
+    ```bash
+    npm install
+    ```
+
+    or
+
+    ```bash
+    pnpm install
+    ```
+
+5. Navigate to the project directory and install the required dependencies using one of the following package managers:
+
+    ```bash
+    pnpm dev
+    ```
+
+    or
+
+    ```bash
+    npm run dev
+    ```
+
+6. Open your web browser and load the appropriate development build. For example, if you are developing for the Chrome browser using manifest v3, you might load the following path: build/chrome-mv3-dev or build/firefox-mv3-dev.
+
+7. To load the extension in your Chrome browser, follow these professional steps:
+
+   1.Open Google Chrome and navigate to "chrome://extensions."
+
+   2.Within the Extensions page, locate and click on the "Load Unpacked" button.
+
+   3.A file dialog will appear. Here, navigate to the "build" folder within your project's repository.
+
+   4.Select the "build" folder to load your extension into Chrome.
+
+   5.You should now see your extension available in the Chrome browser's menu bar under the "Extensions" section, denoted as "DEV | [Name of Your Extension]."
+ 
+   6.This process enables you to test and use your extension during development within the Chrome browser.
+
+8. Start editing the popup, modify the popup.tsx file. Any changes you make here should auto-update the extension.
+9. To add an options page, create an `options.tsx` file in the root directory and export a default React component. Similarly, to add a content page, create a `content.ts` file, import the necessary module, and perform the required logic. Make sure to reload the extension in your browser after making these changes.
+
+10. #### For more reference, read the [Plasmo documentation](https://docs.plasmo.com/).
+
+---
 
 ## Making production build
 
-Run the following:
+To create a production bundle for your extension, follow these steps:
 
-```bash
-pnpm build
-# or
-npm run build
-```
+1. Run either of the following commands:
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+    ```bash
+    pnpm build
+    ```
+
+    or
+
+    ```bash
+    npm run build
+    ```
+
+2. This will generate a production bundle of your extension, which can be zipped and published to the stores.
+
+---
 
 ## Submit to the webstores
 
